@@ -13,14 +13,14 @@
     <div class="navbar">
       <div class="logo">SPT</div>
       <ul class="nav-links">
-        <li><a class="active" href="#">HOME</a></li>
+        <li><a href="homenon" class="active">HOME</a></li>
         <li><a href="about">ABOUT SPT</a></li>
-        <li><a href="#">OUR PRODUCT</a></li>
+        <li><a href="homenon">OUR PRODUCT</a></li>
         <li><a href="contact">CONTACT US</a></li>
       </ul>
       <div class="auth-buttons">
-        <a href="#" class="btn">Login</a>
-        <a href="#" class="btn">Register</a>
+        <a href="login" class="btn">Login</a>
+        <a href="login" class="btn">Register</a>
       </div>
     </div>
 

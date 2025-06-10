@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - SPT</title>
   <link rel="stylesheet" href="{{ asset('css/contactnon.css') }}">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="contact-hero">
+  <!-- Hero Header -->
+  <header class="about-hero">
     <nav class="navbar">
       <div class="logo">SPT</div>
       <ul class="nav-links">
         <li><a href="homenon">HOME</a></li>
         <li><a href="about">ABOUT SPT</a></li>
-        <li><a href="contactnon">OUR PRODUCT</a></li>
-        <li><a class="active" href="#">CONTACT US</a></li>
+        <li><a href="homenon">OUR PRODUCT</a></li>
+        <li><a href="contact" class="active">CONTACT US</a></li>
       </ul>
       <div class="auth-buttons">
-        <a href="#" class="btn">Login</a>
-        <a href="#" class="btn">Register</a>
+        <a href="login" class="btn">Login</a>
+        <a href="login" class="btn">Register</a>
       </div>
     </nav>
     <div class="hero-content">
       <h1>CONTACT US</h1>
-      <p>We always try to make our customer happy. We provide all kind of facilities. Your satisfaction is our main priority!</p>
+      <p>Reach out for collaborations, support, or general inquiries.</p>
     </div>
   </header>
 
@@ -35,41 +35,39 @@
     <a href="#">Home</a> / <span>Contact Us</span>
   </div>
 
-  <!-- Contact Section -->
   <section class="contact-section">
-    <div class="contact-form">
-      <h2><span>sahabat pakan ternak</span><br>Indonesia</h2>
-      <p class="contact-sub">Contact Us</p>
-      <p class="desc">Have a question or need help? Send us a message — we’re here for you!</p>
-
-      <form>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Phone number">
+  <div class="contact-container">
+    <div class="contact-left">
+      <h3><span>sahabat pakan ternak</span><br><strong>Indonesia</strong></h3>
+      <p>Have a question or need help? Send us a message — we’re here for you!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone number" required>
         <button type="submit">KIRIM</button>
       </form>
-
       <div class="contact-info">
-        <div><strong>📞 PHONE</strong><br><span>081 5632 7534</span></div>
-        <div><strong>📠 FAX</strong><br><span>083 5532 1314</span></div>
-        <div><strong>📧 EMAIL</strong><br><span>info@spt.com</span></div>
+        <p><strong>PHONE</strong><br> 0812 1234 1234</p>
+        <p><strong>FAX</strong><br> 0812 1234 1234</p>
+        <p><strong>EMAIL</strong><br> info@sahabatpakan.co.id</p>
       </div>
     </div>
-    <div class="contact-img">
-      <img src="pabrik.jpg" alt="Lokasi SPT">
+    <div class="contact-right">
+      <img src="../external/pakan3.jpg" alt="Location image">
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
-
   <footer>
     <div class="footer-content">
       <div class="footer-info">
         <h3>SPT</h3>
-        <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru, serta spesialis dalam bidang produksi hasil pertanian dan peternakan.</p>
+        <p>Perusahaan peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru.</p>
       </div>
       <div class="footer-code">
-        <img src="qrcode.png" alt="QR Code" width="120">
+        <img src="../external/image.png" alt="QR Code" width="120" />
         <p>Scan Me</p>
       </div>
       <nav class="footer-nav">
