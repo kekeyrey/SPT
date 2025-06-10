@@ -14,18 +14,13 @@
       <div class="logo">SPT</div>
       <ul class="nav-links">
         <li><a href="homenon">HOME</a></li>
-<<<<<<< HEAD
         <li><a href="about" class="active">ABOUT SPT</a></li>
-        <li><a href="homenon">OUR PRODUCT</a></li>
-=======
-        <li><a class="active" href="about">ABOUT SPT</a></li>
         <li><a href="#">OUR PRODUCT</a></li>
->>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
         <li><a href="contact">CONTACT US</a></li>
       </ul>
       <div class="auth-buttons">
         <a href="login" class="btn">Login</a>
-        <a href="login" class="btn">Register</a>
+        <a href="register" class="btn">Register</a>
       </div>
     </nav>
     <div class="hero-content">
@@ -39,7 +34,7 @@
     <a href="homenon">Home</a> / <span>Contact Us</span>
   </div>
 
-  <!-- About -->
+  <!-- About Section -->
 <section class="about" id="about">
   <div class="about-images">
     <img src="../external/pakan2.jpg" alt="Pakan Ternak" />
@@ -51,7 +46,7 @@
     Sahabat Pakan Ternak adalah usaha yang bergerak di bidang penyediaan bahan baku pakan ternak, khususnya polar, biskuit, dan susu, yang diformulasikan untuk memenuhi kebutuhan nutrisi ternak secara optimal. Kami memahami bahwa kualitas pakan sangat menentukan kesehatan, pertumbuhan, dan produktivitas ternak, oleh karena itu kami menghadirkan bahan-bahan pilihan dengan standar mutu tinggi dan harga yang kompetitif. Dengan layanan yang ramah dan responsif, Sahabat Pakan Ternak berkomitmen menjadi mitra terbaik bagi para peternak, baik skala kecil maupun besar, yang ingin meningkatkan efisiensi usaha peternakan mereka. Melalui produk yang aman, bernutrisi, dan mudah diakses, kami siap mendukung kemajuan peternakan Indonesia secara berkelanjutan.
   </p>
   <p>
-    Website Sahabat Pakan Ternak dikembangkan untuk memudahkan peternak dalam mendapatkan informasi seputar pakan ternak secara cepat dan praktis. Melalui ini, peternak bisa membeli pakan, mengetahui kandungan yang terdapat dalam pakan, dan cara penggunaan yang tepat. Selain itu, website ini juga menjadi sarana untuk memperluas jangkauan peternak - peternak lainnya di seluruh wilayah sekitar ataupun luar sekitar.
+    Website Sahabat Pakan Ternak dikembangkan untuk memudahkan peternak dalam mendapatkan informasi seputar pakan ternak secara cepat dan praktis. Melalui ini, peternak bisa membeli pakan, mengetahui kandungan yang terdapat dalam pakan, dan cara penggunaan yang tepat. Selain itu, website ini juga menjadi sarana untuk memperluas jangkauan peternak-peternak lainnya di seluruh wilayah sekitar ataupun luar sekitar.
   </p>
   <img src="../external/nav.jpg" alt="Pakan Ternak" class="about-bottom-img"/>
 </section>
@@ -68,36 +63,24 @@
   </div>
 </section>
 
-
-  <!-- Footer -->
-  <footer class="footer" id="contact">
-    <div class="footer-content">
-<<<<<<< HEAD
+<!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="footer-content">
+    <div class="footer-info">
       <h3>SPT</h3>
-      <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen.</p>
-=======
-      <div class="footer-info">
-        <h3>SPT</h3>
-        <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru, serta spesialis dalam bidang produksi hasil pertanian dan peternakan.</p>
-      </div>
-      <div class="footer-code">
-        <img src="../external/scan.jpg" alt="QR Code" width="120">
-        <p>Scan Me</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="homenon">HOME</a>
-        <a href="about">ABOUT SPT</a>
-        <a href="#">OUR PRODUCT</a>
-        <a href="contact">CONTACT US</a>
-      </nav>
->>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
+      <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru, serta spesialis dalam bidang produksi hasil pertanian dan peternakan.</p>
     </div>
-    <nav>
-      <a href="#">HOME</a>
-      <a href="#about">ABOUT SPT</a>
-      <a href="#products">OUR PRODUCT</a>
-      <a href="#contact">CONTACT US</a>
+    <div class="footer-code">
+      <img src="../external/scan.jpg" alt="QR Code" width="120" />
+      <p>Scan Me</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="homenon">HOME</a>
+      <a href="about">ABOUT SPT</a>
+      <a href="#">OUR PRODUCT</a>
+      <a href="contact">CONTACT US</a>
     </nav>
-  </footer>
+  </div>
+</footer>
 </body>
 </html>

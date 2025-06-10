@@ -9,163 +9,123 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header class="hero-section">
     <div class="navbar">
       <div class="logo">SPT</div>
       <ul class="nav-links">
-<<<<<<< HEAD
-        <li><a href="homenon" class="active">HOME</a></li>
-=======
         <li><a class="active" href="homenon">HOME</a></li>
->>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
         <li><a href="about">ABOUT SPT</a></li>
         <li><a href="homenon">OUR PRODUCT</a></li>
         <li><a href="contact">CONTACT US</a></li>
       </ul>
       <div class="auth-buttons">
         <a href="login" class="btn">Login</a>
-<<<<<<< HEAD
-        <a href="login" class="btn">Register</a>
-=======
-        <a href="#" class="btn">Register</a>
->>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
+        <a href="register" class="btn">Register</a>
       </div>
     </div>
 
-
-            <div class="frame-3">
-  <div class="group">
-    <div class="line"></div>
-    <div class="home-4">
-      <a href=""><span class="home-5">HOME</span></a>
+    <div class="frame-3">
+      <div class="group">
+        <div class="line"></div>
+        <div class="home-4">
+          <a href="#"><span class="home-5">HOME</span></a>
+        </div>
+      </div>
     </div>
+
+    <div class="frame-c">
+      <div class="log">
+        <div class="frame-d"><span class="login">Login</span></div>
+      </div>
+      <div class="log-e">
+        <div class="frame-f"><span class="register">Register</span></div>
+      </div>
+    </div>
+
+    <span class="sahabat-pakan-ternak">SAHABAT <br />PAKAN TERNAK</span>
+    <span class="kami-hadir">
+      Kami hadir untuk memenuhi kebutuhan para peternak Indonesia dengan<br />
+      menyediakan produk ternak yang diproduksi dengan sistem<br />
+      teknologi termutakhir.
+    </span>
   </header>
 
-<section class="about">
-  <div class="about-gallery">
-    <div class="img-shape shape-top">
-      <img src="../external/pakan1.jpg" alt="Pakan 1">
-    </div>
-    <div class="img-shape shape-bottom-left">
-      <img src="../external/pakan2.jpg" alt="Pakan 2">
-    </div>
-    <div class="img-shape shape-bottom-right">
-      <img src="../external/pakan4.jpg" alt="Pakan 3">
-    </div>
-  </div>
-</div>
-
-
-            <div class="frame-c">
-              <div class="log">
-                <div class="frame-d"><span class="login">Login</span></div>
-              </div>
-              <div class="log-e">
-                <div class="frame-f">
-                  <span class="register">Register</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <span class="sahabat-pakan-ternak">SAHABAT <br />PAKAN TERNAK</span
-          ><span class="kami-hadir"
-            >Kami hadir untuk memenuhi kebutuhan para peternak Indonesia
-            dengan<br />menyediakan produk ternak yang diproduksi dengan
-            sistem<br />teknologi termutakhir.</span
-          >
-          <div class="group-10">
-            <div class="frame-11">
-              <div class="group-12">
-                <div class="home-13"><span class="home-14">HOME</span></div>
-              </div>
-              <div class="group-15">
-                <div class="about-spark-16">
-                  <span class="about-spark-17">ABOUT SPT</span>
-                </div>
-              </div>
-              <div class="group-18">
-                <div class="our-product-19">
-                  <span class="our-product-1a">OUR PRODUCT</span>
-                </div>
-              </div>
-              <div class="group-1b">
-                <div class="contact-us-1c">
-                  <span class="contact-us-1d">CONTACT US</span>
-                </div>
-              </div>
-            </div>
-            <div class="footer">
-              <div class="logo-1e"><span class="spt-1f">SPT</span></div>
-              <div class="group-20">
-                <span class="tentang-spt">Tentang SPT</span
-                ><span class="perusahaan-peternakan"
-                  >Perusahaan Peternakan terintegrasi<br />yang memberikan
-                  produk terbaik<br />kepada konsumen. Kami berpengalaman<br />di
-                  bidang peternakan dengan system<br />teknologi terbaru, serta
-                  spesialis dalam<br />bidang produksi hasil pertanian dan
-                  peternakan.</span
-                >
-              </div>
-              <div class="rectangle"></div>
-            </div>
-          </div>
-          <div class="gudang-pakan"></div>
-          <span class="sahabat-pakan-ternak-21">Sahabat Pakan Ternak</span
-          ><span class="sahabat-pakan-ternak-22"
-            >Sahabat Pakan Ternak adalah usaha yang bergerak di bidang
-            penyediaan bahan baku pakan ternak, khususnya polar, biskuit, dan
-            susu, yang diformulasikan untuk memenuhi kebutuhan nutrisi ternak
-            secara optimal. <br /><br />Kami memahami bahwa kualitas pakan
-            sangat menentukan kesehatan, pertumbuhan, dan produktivitas ternak,
-            oleh karena itu kami menghadirkan bahan-bahan pilihan dengan standar
-            mutu tinggi dan harga yang kompetitif</span
-          >
-          <div class="be-b-e"></div>
-          <div class="dbf-ceaaace"></div>
-          <div class="pppppppppp"><div class="rectangle-23"></div></div>
-          <div class="rectangle-24"></div>
-          <div class="pakan">
-            <div class="frame-25">
-              <div class="frame-26">
-                <div class="frame-27"><span class="all">All</span></div>
-              </div>
-              <div class="frame-28">
-                <div class="frame-29">
-                  <span class="pakan-jadi">Pakan Jadi</span>
-                </div>
-              </div>
-              <div class="frame-2a">
-                <div class="frame-2b">
-                  <span class="bahan-baku-pakan">Bahan Baku Pakan</span>
-                </div>
-              </div>
-            </div>
-            <div class="frame-2c">
-              <div class="jadi">
-                <div class="chatgpt-image"></div>
-                <span class="bahan-pakan-babi">Bahan Pakan Babi</span>
-              </div>
-              <div class="biskuit">
-                <div class="whatsapp-image"></div>
-                <span class="bahan-pakan-biskuit">Biskuit</span>
-              </div>
-              <div class="susu">
-                <div class="rounded-rectangle"></div>
-                <span class="bahan-pakan-susu">Susu</span>
-              </div>
-              <div class="polar">
-                <div class="whatsapp-image-2d"></div>
-                <span class="bahan-polar">Polar</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="download"></div>
-        <div class="rectangle-2e"></div>
-        <div class="aerial-view-factory"></div>
-        <div class="rectangle-2f"></div>
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-gallery">
+      <div class="img-shape shape-top">
+        <img src="../external/pakan1.jpg" alt="Pakan 1">
+      </div>
+      <div class="img-shape shape-bottom-left">
+        <img src="../external/pakan2.jpg" alt="Pakan 2">
+      </div>
+      <div class="img-shape shape-bottom-right">
+        <img src="../external/pakan4.jpg" alt="Pakan 3">
       </div>
     </div>
+  </section>
+
+  <!-- Navigation Shortcut -->
+  <div class="group-10">
+    <div class="frame-11">
+      <div class="group-12"><div class="home-13"><span class="home-14">HOME</span></div></div>
+      <div class="group-15"><div class="about-spark-16"><span class="about-spark-17">ABOUT SPT</span></div></div>
+      <div class="group-18"><div class="our-product-19"><span class="our-product-1a">OUR PRODUCT</span></div></div>
+      <div class="group-1b"><div class="contact-us-1c"><span class="contact-us-1d">CONTACT US</span></div></div>
+    </div>
+  </div>
+
+  <!-- Deskripsi dan Produk -->
+  <div class="gudang-pakan"></div>
+  <span class="sahabat-pakan-ternak-21">Sahabat Pakan Ternak</span>
+  <span class="sahabat-pakan-ternak-22">
+    Sahabat Pakan Ternak adalah usaha yang bergerak di bidang penyediaan bahan baku pakan ternak, khususnya polar, biskuit, dan susu, yang diformulasikan untuk memenuhi kebutuhan nutrisi ternak secara optimal.
+    <br /><br />
+    Kami memahami bahwa kualitas pakan sangat menentukan kesehatan, pertumbuhan, dan produktivitas ternak, oleh karena itu kami menghadirkan bahan-bahan pilihan dengan standar mutu tinggi dan harga yang kompetitif.
+  </span>
+
+  <div class="pakan">
+    <div class="frame-25">
+      <div class="frame-26"><div class="frame-27"><span class="all">All</span></div></div>
+      <div class="frame-28"><div class="frame-29"><span class="pakan-jadi">Pakan Jadi</span></div></div>
+      <div class="frame-2a"><div class="frame-2b"><span class="bahan-baku-pakan">Bahan Baku Pakan</span></div></div>
+    </div>
+
+    <div class="frame-2c">
+      <div class="jadi">
+        <div class="chatgpt-image"></div>
+        <span class="bahan-pakan-babi">Bahan Pakan Babi</span>
+      </div>
+      <div class="biskuit">
+        <div class="whatsapp-image"></div>
+        <span class="bahan-pakan-biskuit">Biskuit</span>
+      </div>
+      <div class="susu">
+        <div class="rounded-rectangle"></div>
+        <span class="bahan-pakan-susu">Susu</span>
+      </div>
+      <div class="polar">
+        <div class="whatsapp-image-2d"></div>
+        <span class="bahan-polar">Polar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo-1e"><span class="spt-1f">SPT</span></div>
+    <div class="group-20">
+      <span class="tentang-spt">Tentang SPT</span>
+      <span class="perusahaan-peternakan">
+        Perusahaan Peternakan terintegrasi<br />
+        yang memberikan produk terbaik kepada konsumen.<br />
+        Kami berpengalaman di bidang peternakan dengan sistem<br />
+        teknologi terbaru, serta spesialis dalam bidang produksi<br />
+        hasil pertanian dan peternakan.
+      </span>
+    </div>
+    <div class="rectangle"></div>
   </footer>
 
 </body>

@@ -21,7 +21,7 @@
       </ul>
       <div class="auth-buttons">
         <a href="login" class="btn">Login</a>
-        <a href="login" class="btn">Register</a>
+        <a href="register" class="btn">Register</a>
       </div>
     </nav>
     <div class="hero-content">
@@ -35,10 +35,11 @@
     <a href="#">Home</a> / <span>Contact Us</span>
   </div>
 
-  <section class="contact-section">
+  <!-- Contact Section -->
+<section class="contact-section">
   <div class="contact-container">
     <div class="contact-left">
-      <h3><span>sahabat pakan ternak</span><br><strong>Indonesia</strong></h3>
+      <h3><span>Sahabat Pakan Ternak</span><br><strong>Indonesia</strong></h3>
       <p>Have a question or need help? Send us a message — we’re here for you!</p>
       <form class="contact-form">
         <input type="text" placeholder="Name" required>
@@ -52,41 +53,31 @@
         <p><strong>EMAIL</strong><br> info@sahabatpakan.co.id</p>
       </div>
     </div>
-<<<<<<< HEAD
-    <div class="contact-right">
-      <img src="../external/pakan3.jpg" alt="Location image">
-=======
     <div class="contact-img">
       <img src="../external/pabrik.jpg" alt="Lokasi SPT">
->>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
     </div>
   </div>
 </section>
 
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>SPT</h3>
-        <p>Perusahaan peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru.</p>
-      </div>
-      <div class="footer-code">
-<<<<<<< HEAD
-        <img src="../external/image.png" alt="QR Code" width="120" />
-=======
-        <img src="../external/scan.jpg" alt="QR Code" width="120">
->>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
-        <p>Scan Me</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="homenon">HOME</a>
-        <a href="about">ABOUT SPT</a>
-        <a href="#">OUR PRODUCT</a>
-        <a href="contact">CONTACT US</a>
-      </nav>
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-info">
+      <h3>SPT</h3>
+      <p>Perusahaan peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru.</p>
     </div>
-  </footer>
+    <div class="footer-code">
+      <img src="../external/scan.jpg" alt="QR Code" width="120" />
+      <p>Scan Me</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="homenon">HOME</a>
+      <a href="about">ABOUT SPT</a>
+      <a href="#">OUR PRODUCT</a>
+      <a href="contact">CONTACT US</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
