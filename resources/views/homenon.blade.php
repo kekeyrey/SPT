@@ -22,7 +22,7 @@
   <div class="group">
     <div class="line"></div>
     <div class="home-4">
-      <a href=""><span class="home-5">HOME</span></a>
+      <a href="homenon"><span class="home-5">HOME</span></a>
     </div>
   </div>
   <div class="group-6">
@@ -114,6 +114,7 @@
           <div class="pakan">
             <div class="frame-25">
               <div class="frame-26">
+                
                 <div class="frame-27"><span class="all">All</span></div>
               </div>
               <div class="frame-28">

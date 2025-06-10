@@ -713,7 +713,8 @@ button {
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  flex-wrap: nowrap;
+  text-align: center;
+  flex-wrap: wrap;
   flex-shrink: 0;
   gap: 120px;
   position: relative;
@@ -864,7 +865,8 @@ button {
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  flex-wrap: nowrap;
+  text-align: center;
+  flex-wrap: wrap;
   flex-shrink: 0;
   gap: 80px;
   position: relative;
