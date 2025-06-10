@@ -1,210 +1,134 @@
 <!DOCTYPE html>
-<html lang="english"
-  ><head
-    ><title>exported project</title
-    ><meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    /><meta charset="utf-8" /><meta
-      property="twitter:card"
-      content="summary_large_image"
-    />
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPT - Sahabat Pakan Ternak</title>
+  <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+  <style>
+    html {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    .container, .hero-section, .company-intro-section,
+    .products-section, .commitment-section, .site-footer {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+  <!-- HERO SECTION -->
+  <section id="section-hero" class="hero-section">
+    <div class="hero-background">
+      <img src="{{ asset('images/nav.jpg') }}" alt="Aerial view of factory" class="hero-bg-image">
+      <img src="{{ asset('images/hero-overlay.svg') }}" alt="Background overlay" class="hero-svg-overlay">
+    </div>
+    <header class="main-header">
+      <div class="logo">
+        <span class="logo-text-spt">SPT</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#section-hero" class="nav-link active">HOME</a>
+        <a href="#section-company-intro" class="nav-link">ABOUT SPT</a>
+        <a href="#section-products" class="nav-link">OUR PRODUCT</a>
+        <a href="#section-contact" class="nav-link">CONTACT US</a>
+      </nav>
+      <div class="auth-buttons">
+        <button type="button" class="auth-button login-button">Login</button>
+        <button type="button" class="auth-button register-button">Register</button>
+      </div>
+    </header>
+    <div class="hero-content">
+      <h1 class="hero-title">SAHABAT <br>PAKAN TERNAK</h1>
+    </div>
+  </section>
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
+  <!-- COMPANY INTRO SECTION -->
+  <section id="section-company-intro" class="company-intro-section">
+    <div class="company-intro-container">
+      <div class="intro-images-column">
+        <div class="merged-image-container">
+          <img src="{{ asset('images/img-gudang.png') }}" alt="Gudang pakan" class="intro-image img-gudang">
+          <img src="{{ asset('images/img-pakan1.png') }}" alt="Pakan ternak 1" class="intro-image img-pakan1">
+          <img src="{{ asset('images/img-pakan2.png') }}" alt="Pakan ternak 2" class="intro-image img-pakan2">
+        </div>
+      </div>
+      <div class="intro-text-column">
+        <h2 class="intro-title">Sahabat Pakan Ternak</h2>
+        <p class="intro-description">
+          Sahabat Pakan Ternak adalah usaha yang bergerak di bidang penyediaan bahan baku pakan ternak, khususnya polar, biskuit, dan susu, yang diformulasikan untuk memenuhi kebutuhan nutrisi ternak secara optimal.
+          <br><br>
+          Kami memahami bahwa kualitas pakan sangat menentukan kesehatan, pertumbuhan, dan produktivitas ternak, oleh karena itu kami menghadirkan bahan-bahan pilihan dengan standar mutu tinggi dan harga yang kompetitif.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        fill: var(--dl-color-theme-neutral-dark);
-      }
-    </style>
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
-      ><link rel="stylesheet" href="{{ asset('css/inde.css') }}">
-<div class="home1-container"
-        ><div class="home1home11"
-          ><img
-            src="../external/gudangpakan23041-ra9x-400h.png"
-            alt="gudangpakan23153"
-            class="home1-gudangpakan2"
-          />
-          ><img
-            src="../external/rectangle333153-w6vk.svg"
-            alt="Rectangle333153"
-            class="home1-rectangle33"
-          /><img
-            src="../external/image573a4bc9dbf946688e6bce2aa53ac25e13153-fq37-300w.png"
-            alt="IMAGE573a4bc9dbf946688e6bce2aa53ac25e13153"
-            class="home1image573a4bc9dbf946688e6bce2aa53ac25e1"
-          /><img
-            src="../external/image37b533e02791420b95e6f5f56f76c0f013153-42h8-400h.png"
-            alt="IMAGE37b533e02791420b95e6f5f56f76c0f013153"
-            class="home1image37b533e02791420b95e6f5f56f76c0f01"
-          /><img
-            src="../external/gudangpakan43153-c1nh-500w.png"
-            alt="gudangpakan43153"
-            class="home1-gudangpakan4"
-          /><span class="home1-text10">Sahabat Pakan Ternak</span
-          ><img
-            src="../external/rectangle3923153-hkuz-1500w.png"
-            alt="Rectangle3923153"
-            class="home1-rectangle392"
-          /><img
-            src="../external/rectangle3913153-s9hg-1500w.png"
-            alt="Rectangle3913153"
-            class="home1-rectangle391"
-          /><div class="home1-frame3892"
-            ><div class="home1-frame3634"><div class="home1-logo1"></div></div
-            ><div class="home1-frame36171"
-              ><div class="home1-group36351"
-                ><div class="home1home12"
-                  ><span class="home1-text11">HOME</span></div
-                ><img
-                  src="../external/line173153-z86q.svg"
-                  alt="Line173153"
-                  class="home1-line17" /></div
-              ><div class="home1-group36361"
-                ><div class="home1aboutspark11"
-                  ><span class="home1-text12">ABOUT SPT</span></div
-                ></div
-              ><div class="home1-group36371"
-                ><div class="home1ourproduct11"
-                  ><span class="home1-text13">OUR PRODUCT</span></div
-                ></div
-              ><div class="home1-group36381"
-                ><div class="home1contactus11"
-                  ><span class="home1-text14">CONTACT US</span></div
-                ></div
-              ></div
-            ><div class="home1-frame3862"
-              ><div class="home1-log1"
-                ><div class="home1-frame36461"
-                  ><span class="home1-text15">Login</span></div
-                ></div
-              ><div class="home1-log2"
-                ><div class="home1-frame36462"
-                  ><span class="home1-text16">Register</span></div
-                ></div
-              ></div
-            ></div
-          ><span class="home1-text17"
-            ><span>SAHABAT </span><br /><span>PAKAN TERNAK</span></span
-          ><img
-            src="../external/download13153-44j-1500h.png"
-            alt="download13153"
-            class="home1-download1"
-          /><span class="home1-text21"
-            ><span
-              >Kami hadir untuk memenuhi kebutuhan para peternak Indonesia
-              dengan</span
-            ><br /><span
-              >menyediakan produk ternak yang diproduksi dengan sistem</span
-            ><br /><span>teknologi termutakhir.</span></span
-          ><div class="home1-group239251"
-            ><div class="home1-footer"
-              ><div class="home1-group239250"
-                ><span class="home1-text27"
-                  ><span>Perusahaan Peternakan terintegrasi</span><br /><span
-                    >yang memberikan produk terbaik</span
-                  ><br /><span>kepada konsumen. Kami berpengalaman</span
-                  ><br /><span>di bidang peternakan dengan systemt</span
-                  ><br /><span>eknologi terbaru, serta spesialis dalam</span
-                  ><br /><span
-                    >bidang produksi hasil pertanian dan peternakan.</span
-                  ></span
-                ><span class="home1-text39">Tentang SPT</span></div
-              ><div class="home1-logo2"
-                ><span class="home1-text40">SPT</span></div
-              ></div
-            ><div class="home1-frame36172"
-              ><div class="home1-group36352"
-                ><div class="home1home13"
-                  ><span class="home1-text41">HOME</span></div
-                ></div
-              ><div class="home1-group36362"
-                ><div class="home1aboutspark12"
-                  ><span class="home1-text42">ABOUT SPT</span></div
-                ></div
-              ><div class="home1-group36372"
-                ><div class="home1ourproduct12"
-                  ><span class="home1-text43">OUR PRODUCT</span></div
-                ></div
-              ><div class="home1-group36382"
-                ><div class="home1contactus12"
-                  ><span class="home1-text44">CONTACT US</span></div
-                ></div
-              ></div
-            ></div
-          ><span class="home1-text45"
-            ><span
-              >Sahabat Pakan Ternak adalah usaha yang bergerak di bidang
-              penyediaan bahan baku pakan ternak, khususnya polar, biskuit, dan
-              susu, yang diformulasikan untuk memenuhi kebutuhan nutrisi ternak
-              secara optimal. </span
-            ><br /><br /><span
-              >Kami memahami bahwa kualitas pakan sangat menentukan kesehatan,
-              pertumbuhan, dan produktivitas ternak, oleh karena itu kami
-              menghadirkan bahan-bahan pilihan dengan standar mutu tinggi dan
-              harga yang kompetitif</span
-            ></span
-          ><div class="home1-pakan"
-            ><div class="home1-frame239249"
-              ><div class="home1-frame239242"
-                ><div class="home1-frame2392401"
-                  ><span class="home1-text50">All</span></div
-                ></div
-              ><div class="home1-frame239244"
-                ><div class="home1-frame2392402"
-                  ><span class="home1-text51">Pakan Jadi</span></div
-                ></div
-              ><div class="home1-frame239245"
-                ><div class="home1-frame2392403"
-                  ><span class="home1-text52">Bahan Baku Pakan</span></div
-                ></div
-              ></div
-            ><div class="home1-frame239266"
-              ><div class="home1-jadi"
-                ><img
-                  src="../external/chatgptimageapr182025093927pm4i418-o49t-200w.png"
-                  alt="ChatGPTImageApr182025093927PM4I418"
-                  class="home1-chat-gpt-image-apr182025093927pm4"
-                /><span class="home1-text53">Bahan Pakan Babi</span></div
-              ><div class="home1-biskiit"
-                ><img
-                  src="../external/whatsappimage20250517at0857132i418-6or-200w.png"
-                  alt="WhatsAppImage20250517at0857132I418"
-                  class="home1-whats-app-image20250517at0857132"
-                /><span class="home1-text54">Bahan Pakan Biskuit</span></div
-              ><div class="home1-susu"
-                ><img
-                  src="../external/roundedrectanglei418-g8wq-200w.png"
-                  alt="RoundedrectangleI418"
-                  class="home1-roundedrectangle"
-                /><span class="home1-text55">Bahan Pakan Susu</span></div
-              ><div class="home1-polar"
-                ><img
-                  src="../external/whatsappimage20250517at0857154i418-t7pk-200w.png"
-                  alt="WhatsAppImage20250517at0857154I418"
-                  class="home1-whats-app-image20250517at0857154"
-                /><span class="home1-text56">Bahan Polar</span></div
-              ></div
-            ></div
-          ></div
-        ></div
-      ></div
-    >
-  </body></html
->
+  <!-- PRODUCTS SECTION -->
+  <section id="section-products" class="products-section">
+    <div class="products-container">
+      <div class="product-filters">
+        <button type="button" class="filter-button active">All</button>
+        <button type="button" class="filter-button">Pakan Jadi</button>
+        <button type="button" class="filter-button">Bahan Baku Pakan</button>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="{{ asset('images/pakan-babi.png') }}" alt="Bahan Pakan Babi" class="product-image">
+          <p class="product-name">Bahan Pakan Babi</p>
+        </div>
+        <div class="product-card">
+          <img src="{{ asset('images/biskuit.png') }}" alt="Biskuit" class="product-image">
+          <p class="product-name">Biskuit</p>
+        </div>
+        <div class="product-card">
+          <img src="{{ asset('images/susu.png') }}" alt="Susu" class="product-image">
+          <p class="product-name">Susu</p>
+        </div>
+        <div class="product-card">
+          <img src="{{ asset('images/polar.png') }}" alt="Polar" class="product-image">
+          <p class="product-name">Polar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITMENT SECTION -->
+  <section id="section-commitment" class="commitment-section">
+    <div class="commitment-container">
+      <p class="commitment-text">
+        Kami hadir untuk memenuhi kebutuhan para peternak Indonesia dengan menyediakan produk ternak yang diproduksi dengan sistem teknologi termutakhir.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="section-footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <span class="footer-logo-text-spt">SPT</span>
+        <h3 class="footer-about-title">Tentang SPT</h3>
+        <p class="footer-about-description">
+          Perusahaan peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru, serta spesialis dalam produksi hasil pertanian dan peternakan.
+        </p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#section-hero" class="footer-nav-link">HOME</a>
+        <a href="#section-company-intro" class="footer-nav-link">ABOUT SPT</a>
+        <a href="#section-products" class="footer-nav-link">OUR PRODUCT</a>
+        <a href="#section-contact" class="footer-nav-link">CONTACT US</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
