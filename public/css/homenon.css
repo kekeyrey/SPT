@@ -108,14 +108,21 @@ body {
   padding: 4rem 2rem;
   align-items: center;
   justify-content: center;
-  background: white;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 120px;
+  position: relative;
+  min-width: 0;
+  height: 45px;
+  z-index: 62;
 }
-
-.about-gallery {
-  flex: 1 1 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+.frame-26 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
   gap: 10px;
   position: relative;
   max-width: 450px;
@@ -174,15 +181,42 @@ body {
   text-align: center;
   padding: 1rem;
 }
-
-.filter-section button {
-  padding: 0.5rem 1rem;
-  margin: 0.3rem;
-  border: 1px solid #00cccc;
-  background: white;
-  color: #00cccc;
-  cursor: pointer;
-  transition: 0.3s;
+.frame-2c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 80px;
+  position: relative;
+  min-width: 0;
+  z-index: 72;
+}
+.jadi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 7px;
+  position: relative;
+  width: 219px;
+  height: 266px;
+  padding: 17px 34px 17px 34px;
+  background: #e4e4e4;
+  z-index: 73;
+  border-radius: 10px;
+}
+.chatgpt-image {
+  flex-shrink: 0;
+  position: relative;
+  width: 150px;
+  height: 200px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-06-10/KV3hCGgun2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 74;
   border-radius: 5px;
 }
 

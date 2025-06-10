@@ -1,16 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
-Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
-
-
+Route::get('/', function () {return view('homenon');});
 Route::get('/homenon', function () {return view('homenon');});
 
-Route::get('/about', function () {return view('about');});
+Route::get('/about', [AboutController::class, 'about']);
 
-Route::get('/contact', function () {return view('contact');});
+Route::get('/contact', [ContactController::class, 'contact']);
+Route::get('/login', function () {return view('auth.login');});
+Route::get('/dashboard', function () {return view('admin.dashboard');});
 

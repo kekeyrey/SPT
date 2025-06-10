@@ -14,8 +14,13 @@
       <div class="logo">SPT</div>
       <ul class="nav-links">
         <li><a href="homenon">HOME</a></li>
+<<<<<<< HEAD
         <li><a href="about" class="active">ABOUT SPT</a></li>
         <li><a href="homenon">OUR PRODUCT</a></li>
+=======
+        <li><a class="active" href="about">ABOUT SPT</a></li>
+        <li><a href="#">OUR PRODUCT</a></li>
+>>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
         <li><a href="contact">CONTACT US</a></li>
       </ul>
       <div class="auth-buttons">
@@ -67,8 +72,25 @@
   <!-- Footer -->
   <footer class="footer" id="contact">
     <div class="footer-content">
+<<<<<<< HEAD
       <h3>SPT</h3>
       <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen.</p>
+=======
+      <div class="footer-info">
+        <h3>SPT</h3>
+        <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru, serta spesialis dalam bidang produksi hasil pertanian dan peternakan.</p>
+      </div>
+      <div class="footer-code">
+        <img src="../external/scan.jpg" alt="QR Code" width="120">
+        <p>Scan Me</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="homenon">HOME</a>
+        <a href="about">ABOUT SPT</a>
+        <a href="#">OUR PRODUCT</a>
+        <a href="contact">CONTACT US</a>
+      </nav>
+>>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
     </div>
     <nav>
       <a href="#">HOME</a>

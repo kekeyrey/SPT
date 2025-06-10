@@ -52,8 +52,13 @@
         <p><strong>EMAIL</strong><br> info@sahabatpakan.co.id</p>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="contact-right">
       <img src="../external/pakan3.jpg" alt="Location image">
+=======
+    <div class="contact-img">
+      <img src="../external/pabrik.jpg" alt="Lokasi SPT">
+>>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
     </div>
   </div>
 </section>
@@ -67,14 +72,18 @@
         <p>Perusahaan peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru.</p>
       </div>
       <div class="footer-code">
+<<<<<<< HEAD
         <img src="../external/image.png" alt="QR Code" width="120" />
+=======
+        <img src="../external/scan.jpg" alt="QR Code" width="120">
+>>>>>>> 43dc9bc7646f98480729ea24308941d3756a7658
         <p>Scan Me</p>
       </div>
       <nav class="footer-nav">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT SPT</a>
+        <a href="homenon">HOME</a>
+        <a href="about">ABOUT SPT</a>
         <a href="#">OUR PRODUCT</a>
-        <a href="#">CONTACT US</a>
+        <a href="contact">CONTACT US</a>
       </nav>
     </div>
   </footer>
