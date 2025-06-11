@@ -46,11 +46,6 @@
         <button type="submit">KIRIM</button>
       </form>
 
-      <div class="contact-info">
-        <div><strong>📞 PHONE</strong><br><span>081 5632 7534</span></div>
-        <div><strong>📠 FAX</strong><br><span>083 5532 1314</span></div>
-        <div><strong>📧 EMAIL</strong><br><span>info@spt.com</span></div>
-      </div>
     </div>
     <div class="contact-img">
       <img src="../external/pakan4.jpg" alt="Lokasi SPT">
@@ -77,6 +72,7 @@
       </nav>
     </div>
   </footer>
+
 
 </body>
 </html>

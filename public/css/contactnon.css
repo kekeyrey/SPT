@@ -32,6 +32,7 @@ body {
 }
 .nav-links {
   list-style: none;
+  padding-right: 32%;
   display: flex;
   gap: 30px;
 }
@@ -122,17 +123,11 @@ body {
 .contact-form form button:hover {
   background: #00a3a3;
 }
-.contact-info {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #222;
-}
+
 .contact-img img {
   width: 100%;
-  border-radius: 50px 0 50px 20px;
-  max-width: 400px;
+  border-radius: 100px 20px 100px 20px;
+  max-width: 460px;
 }
 
 /* Footer Top */

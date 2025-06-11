@@ -1,4 +1,11 @@
-body {
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel SPT</title>
+  <style>
+   body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff; /* Default page background */
@@ -51,15 +58,15 @@ body {
   padding: 0 40px; 
   box-sizing: border-box;
 }
-.admin-header .logo {
+.admin-header .logo { /* 683:788 */
   font-family: 'Young Serif', serif;
   font-size: 35px;
   font-weight: 400;
   background: linear-gradient(146deg, #a2f6ff 40.16%, #48c6d4 177.69%);
   -webkit-background-clip: text;
-  background-clip: text; /* tambahkan untuk kompatibilitas standar */
   -webkit-text-fill-color: transparent;
-  color: transparent; /* pastikan teks transparan agar background terlihat */
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .admin-header .user-actions {
   display: flex;
@@ -344,3 +351,67 @@ body {
   .about-spt p { font-size: 16px; }
   .footer-nav a { font-size: 18px; }
 }
+  </style>
+</head>
+<body>
+<section id="admin-panel" class="page-container admin-panel-section">
+  <div class="admin-panel-background">
+    <img src="../external/pabrik1.jpg" alt="Factory background" class="bg-image" />
+    <div class="bg-overlay"></div>
+  </div>
+  <div class="admin-panel-content">
+    <!-- Header -->
+    <header class="admin-header">
+      <div class="logo">SPT</div>
+      <div class="user-actions">
+        <a href="#" class="logout-button">Log Out</a>
+        <div class="user-icon">
+          <img src="/page/9ede0eec-2af2-4bdd-a7e8-ff4f7e183177/images/683_823.svg" alt="User" width="40" height="40" style="border-radius:50%;">
+        </div>
+      </div>
+    </header>
+
+    <!-- Dashboard layout -->
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <img src="/page/9ede0eec-2af2-4bdd-a7e8-ff4f7e183177/images/683_810.svg" alt="Search Icon" width="20" height="20" />
+        </div>
+        <a href="#" class="nav-item product-link">
+          <span class="nav-text">Product</span>
+          <img src="/page/9ede0eec-2af2-4bdd-a7e8-ff4f7e183177/images/683_816.svg" alt="Product Icon" class="nav-icon" width="20" height="20" />
+        </a>
+        <a href="#" class="nav-item user-link">
+          <span class="nav-text">User</span>
+          <img src="/page/9ede0eec-2af2-4bdd-a7e8-ff4f7e183177/images/683_821.svg" alt="User Icon" class="nav-icon" width="20" height="20" />
+        </a>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content-area">
+        @yield('content')
+      </main>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="page-footer" class="page-container site-footer">
+  <div class="footer-left">
+    <div class="footer-logo">SPT</div>
+    <div class="about-spt">
+      <h3>Tentang SPT</h3>
+      <p>Perusahaan Peternakan terintegrasi yang memberikan produk terbaik kepada konsumen. Kami berpengalaman di bidang peternakan dengan sistem teknologi terbaru, serta spesialis dalam bidang produksi hasil pertanian dan peternakan.</p>
+    </div>
+  </div>
+  <nav class="footer-nav">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT SPT</a>
+    <a href="#product">OUR PRODUCT</a>
+    <a href="#contact">CONTACT US</a>
+  </nav>
+</footer>
+</body>
+</html>
