@@ -46,29 +46,46 @@
   </section>
 
   <section class="filter-section">
-    <button>All</button>
-    <button>Produk Jadi</button>
-    <button>Bahan Baku Pakan</button>
+    <button onclick="filterProduk('all')">All</button>
+    <button onclick="filterProduk('jadi')">Produk Jadi</button>
+    <button onclick="filterProduk('bahan')">Bahan Baku Pakan</button>
   </section>
 
-  <section class="product-list">
-    <div class="product-card">
-      <img src="external/pakan1.jpg" alt="produk 1" />
-      <p>Produk 1</p>
-    </div>
-    <div class="product-card">
-      <img src="external/pakan2.jpg" alt="produk 2" />
-      <p>Produk 2</p>
-    </div>
-    <div class="product-card">
-      <img src="external/pakan3.jpg" alt="produk 3" />
-      <p>Produk 3</p>
-    </div>
-    <div class="product-card">
-      <img src="external/pakan4.jpg" alt="produk 4" />
-      <p>Produk 4</p>
-    </div>
-  </section>
+<section class="product-list">
+  <div class="product-card" data-kategori="jadi"
+       onclick="showPopup('Pakan Babi', '100% Biskuit', 'Campurkan dengan dedak atau konsentrat')">
+    <img src="../external/Pakan babi.png" alt="Pakan Babi">
+    <p class="product-name">Pakan Babi</p>
+    <p class="product-price">Rp 3.500.000 / Ton</p>
+    <p class="product-desc">Min. order 5 Ton</p>
+  </div>
+
+  <div class="product-card" data-kategori="bahan"
+       onclick="showPopup('Tepung Wafer', '100% Roti & Biskuit', 'Campurkan dengan air hingga homogen')">
+    <img src="../external/Tepung Wafer Biskuit dan roti.png" alt="Tepung Wafer">
+    <p class="product-name">Tepung Wafer</p>
+    <p class="product-price">Rp 50.000.000</p>
+    <p class="product-desc">Min. 10 Ton – Free Ongkir Jawa-Bali</p>
+  </div>
+
+  <div class="product-card" data-kategori="bahan"
+       onclick="showPopup('Bubuk Richeese', 'Bubuk keju kering', 'Taburkan ke pakan utama')">
+    <img src="../external/Bubuk Richeese.png" alt="Bubuk Richeese">
+    <p class="product-name">Bubuk Richeese</p>
+    <p class="product-price">Rp 5.000.000</p>
+    <p class="product-desc">Min. 1 Ton</p>
+  </div>
+
+  <div class="product-card" data-kategori="bahan"
+       onclick="showPopup('Polar Wheat Bran', 'Bekatul gandum', 'Langsung campurkan dengan pakan ternak')">
+    <img src="../external/Polar Wheat Bran.png" alt="Polar Wheat Bran">
+    <p class="product-name">Polar Wheat Bran</p>
+    <p class="product-price">Rp 60.200.000</p>
+    <p class="product-desc">Min. 14 Ton (Tanjung Perak Surabaya)</p>
+  </div>
+</section>
+
+
 
   <section class="footer-top">
     <p>Kami hadir untuk memenuhi kebutuhan para peternak Indonesia dengan menyediakan produk ternak yang diproduksi dengan sistem teknologi termutakhir.</p>
@@ -92,7 +109,48 @@
     </div>
   </footer>
 
+  <!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" onclick="hidePopup()">&times;</span>
+    <div class="popup-grid">
+      <img id="popup-img" src="" alt="popup" />
+      <div class="popup-text">
+        <h3 id="popup-title">Nama Produk</h3>
+        <p><strong>Harga:</strong> <span id="popup-price"></span></p>
+        <p><strong>Minimal Order:</strong> <span id="popup-desc"></span></p>
+        <p><strong>Bahan Pakan:</strong></p>
+        <p id="popup-bahan">-</p>
+        <p><strong>Cara Penggunaan:</strong></p>
+        <p id="popup-penggunaan">-</p>
+        <button class="order-btn">Pre-Order</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+<script>
+  function filterProduk(kategori) {
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      const k = card.getAttribute('data-kategori');
+      card.style.display = (kategori === 'all' || k === kategori) ? 'block' : 'none';
+    });
+  }
+
+  function showPopup(title, bahan, penggunaan) {
+    document.getElementById('popup').style.display = 'flex';
+    document.getElementById('popup-title').innerText = title;
+    document.getElementById('popup-bahan').innerText = bahan;
+    document.getElementById('popup-penggunaan').innerText = penggunaan;
+    document.getElementById('popup-img').src = document.querySelector(`[onclick*="${title}"] img`).src;
+  }
+
+  function hidePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
 
 </body>
 </html>
