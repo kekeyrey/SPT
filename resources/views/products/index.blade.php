@@ -1,49 +1,43 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Daftar Produk</h1>
-<a href="{{ route('products.create') }}" class="add-button" style="background-color:#48c6d4; padding:10px 15px; border-radius:5px; color:#fff; text-decoration:none;">Tambah Produk</a>
+<div class="container">
+    <h1 class="mb-4">Daftar Produk</h1>
 
-@if(session('success'))
-<div class="alert alert-success">{{ session('success') }}</div>
-@endif
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @elseif (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
 
-<table class="product-table" border="1" cellpadding="10" cellspacing="0" style="width:100%; margin-top:20px;">
-    <thead>
-        <tr>
-            <th>No.</th>
-            <th>Nama Produk</th>
-            <th>Deskripsi</th>
-            <th>Harga</th>
-            <th>Kategori</th>
-            <th>Foto</th>
-            <th>Aksi</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($products as $index => $product)
-        <tr>
-            <td>{{ $index + 1 }}</td>
-            <td>{{ $product->name }}</td>
-            <td>{{ $product->description }}</td>
-            <td>{{ $product->price }}</td>
-            <td>{{ $product->kategori }}</td>
-             
-            <td>
-                @if($product->image)
-                <img src="{{ asset($product->image) }}" class="product-image" style="width:100px; height:auto;" />
-                @endif
-            </td>
-            <td>
-                <a href="{{ route('products.edit', $product->id) }}" class="action-button edit-button">Edit</a>
-                <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="action-button delete-button" onclick="return confirm('Yakin hapus?')">Hapus</button>
-                </form>
-            </td>
-        </tr>
+    <div class="row">
+        @foreach ($products as $product)
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    @if ($product->image_url)
+                        <img src="{{ $product->image_url }}" class="card-img-top" alt="{{ $product->name }}">
+                    @else
+                        <img src="https://via.placeholder.com/300x200?text=No+Image" class="card-img-top" alt="No image">
+                    @endif
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <p class="card-text">{{ \Illuminate\Support\Str::limit($product->description, 100) }}</p>
+                        <p class="card-text"><strong>Harga:</strong> Rp {{ number_format($product->price, 0, ',', '.') }}</p>
+                        <p class="card-text"><strong>Kategori:</strong> {{ $product->category->name ?? 'Tidak ada kategori' }}</p>
+                        <a href="#" class="btn btn-primary">Detail</a>
+                    </div>
+                </div>
+            </div>
         @endforeach
-    </tbody>
-</table>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        {{ $products->links() }}
+    </div>
+</div>
 @endsection
