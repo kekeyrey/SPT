@@ -19,10 +19,7 @@
         <li><a href="#">OUR PRODUCT</a></li>
         <li><a class="active" href="#">CONTACT US</a></li>
       </ul>
-      <div class="auth-buttons">
-        <a href="#" class="btn">Login</a>
-        <a href="#" class="btn">Register</a>
-      </div>
+
     </nav>
     <div class="hero-content">
       <h1>CONTACT US</h1>
