@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SPT - Sahabat Pakan Ternak</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/homenon.css') }}">
 </head>
 <body>
@@ -13,12 +13,10 @@
     <div class="navbar">
       <div class="logo">SPT</div>
       <ul class="nav-links">
-        <li><a href="homenon" class="active">HOME</a></li>
-        <li><a href="about">ABOUT SPT</a></li>
+        <li><a href="{{ url('homenon') }}" class="active">HOME</a></li>
+        <li><a href="{{ url('about') }}">ABOUT SPT</a></li>
         <li><a href="#">OUR PRODUCT</a></li>
-        <li><a href="contact">CONTACT US</a></li>
       </ul>
-
     </div>
 
     <div class="hero-text">
@@ -29,13 +27,13 @@
   <section class="about">
     <div class="about-gallery">
       <div class="img-shape shape-top">
-        <img src="external/pakan1.jpg" alt="Pakan 1">
+        <img src="{{ asset('external/pakan1.jpg') }}" alt="Pakan 1">
       </div>
       <div class="img-shape shape-bottom-left">
-        <img src="external/pakan2.jpg" alt="Pakan 2">
+        <img src="{{ asset('external/pakan2.jpg') }}" alt="Pakan 2">
       </div>
       <div class="img-shape shape-bottom-right">
-        <img src="external/pakan4.jpg" alt="Pakan 3">
+        <img src="{{ asset('external/pakan4.jpg') }}" alt="Pakan 3">
       </div>
     </div>
     <div class="about-text">
@@ -46,46 +44,33 @@
   </section>
 
   <section class="filter-section">
-    <button onclick="filterProduk('all')">All</button>
-    <button onclick="filterProduk('jadi')">Produk Jadi</button>
-    <button onclick="filterProduk('bahan')">Bahan Baku Pakan</button>
+    <button onclick="filterProduk('all')" class="filter-btn active">All</button>
+    <button onclick="filterProduk('Produk Jadi')" class="filter-btn">Produk Jadi</button>
+    <button onclick="filterProduk('Bahan Pakan Baku')" class="filter-btn">Bahan Baku Pakan</button>
   </section>
 
-<section class="product-list">
-  <div class="product-card" data-kategori="jadi"
-       onclick="showPopup('Pakan Babi', '100% Biskuit', 'Campurkan dengan dedak atau konsentrat')">
-    <img src="../external/Pakan babi.png" alt="Pakan Babi">
-    <p class="product-name">Pakan Babi</p>
-    <p class="product-price">Rp 3.500.000 / Ton</p>
-    <p class="product-desc">Min. order 5 Ton</p>
-  </div>
+  <section class="product-list">
+    @if(isset($products) && count($products) > 0)
+      @foreach($products as $product)
+        @php
+          $kategori = match($product->category_id) {
+            1 => 'Produk Jadi',
+            2 => 'Bahan Pakan Baku',
+            default => 'lainnya'
+          };
+        @endphp
 
-  <div class="product-card" data-kategori="bahan"
-       onclick="showPopup('Tepung Wafer', '100% Roti & Biskuit', 'Campurkan dengan air hingga homogen')">
-    <img src="../external/Tepung Wafer Biskuit dan roti.png" alt="Tepung Wafer">
-    <p class="product-name">Tepung Wafer</p>
-    <p class="product-price">Rp 50.000.000</p>
-    <p class="product-desc">Min. 10 Ton – Free Ongkir Jawa-Bali</p>
-  </div>
-
-  <div class="product-card" data-kategori="bahan"
-       onclick="showPopup('Bubuk Richeese', 'Bubuk keju kering', 'Taburkan ke pakan utama')">
-    <img src="../external/Bubuk Richeese.png" alt="Bubuk Richeese">
-    <p class="product-name">Bubuk Richeese</p>
-    <p class="product-price">Rp 5.000.000</p>
-    <p class="product-desc">Min. 1 Ton</p>
-  </div>
-
-  <div class="product-card" data-kategori="bahan"
-       onclick="showPopup('Polar Wheat Bran', 'Bekatul gandum', 'Langsung campurkan dengan pakan ternak')">
-    <img src="../external/Polar Wheat Bran.png" alt="Polar Wheat Bran">
-    <p class="product-name">Polar Wheat Bran</p>
-    <p class="product-price">Rp 60.200.000</p>
-    <p class="product-desc">Min. 14 Ton (Tanjung Perak Surabaya)</p>
-  </div>
-</section>
-
-
+        <div class="product-card" data-kategori="{{ $kategori }}" onclick="openPopup('{{ addslashes($product->name ?? 'Produk') }}', '{{ addslashes($product->komposisi ?? 'Tidak tersedia') }}', '{{ addslashes($product->petunjuk_pemakaian ?? 'Tidak tersedia') }}', '{{ addslashes($product->minimal_order ?? '-') }}', '{{ $product->image ? asset('storage/products/' . $product->image) : asset('images/default-product.png') }}')">
+          <img src="{{ $product->image ? asset('storage/products/' . $product->image) : asset('images/default-product.png') }}" 
+               alt="{{ $product->name ?? 'Produk' }}" class="product-image">
+          <p class="product-name">{{ $product->name ?? 'Nama tidak tersedia' }}</p>
+          <!-- <p class="product-desc">{{ $product->minimal_order ?? 'Minimal order tidak tersedia' }}</p> -->
+        </div>
+      @endforeach
+    @else
+      <p style="text-align:center; margin: 2rem auto;">Tidak ada produk tersedia.</p>
+    @endif
+  </section>
 
   <section class="footer-top">
     <p>Kami hadir untuk memenuhi kebutuhan para peternak Indonesia dengan menyediakan produk ternak yang diproduksi dengan sistem teknologi termutakhir.</p>
@@ -101,56 +86,140 @@
       melalui inovasi teknologi dan<br>
       pengelolaan yang profesional.</p>
       <nav class="footer-nav">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT SPT</a>
+        <a href="homenon">HOME</a>
+        <a href="about">ABOUT SPT</a>
         <a href="#">OUR PRODUCT</a>
-        <a href="#">CONTACT US</a>
       </nav>
     </div>
   </footer>
 
-  <!-- Popup -->
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <span class="close" onclick="hidePopup()">&times;</span>
-    <div class="popup-grid">
-      <img id="popup-img" src="" alt="popup" />
-      <div class="popup-text">
-        <h3 id="popup-title">Nama Produk</h3>
-        <p><strong>Harga:</strong> <span id="popup-price"></span></p>
-        <p><strong>Minimal Order:</strong> <span id="popup-desc"></span></p>
-        <p><strong>Bahan Pakan:</strong></p>
-        <p id="popup-bahan">-</p>
-        <p><strong>Cara Penggunaan:</strong></p>
-        <p id="popup-penggunaan">-</p>
-        <button class="order-btn">Pre-Order</button>
+  <!-- Modern Popup Modal -->
+  <div id="productModal" class="popup-overlay">
+    <div class="popup-container">
+      <div class="popup-content">
+        <div class="popup-header">
+          <button class="popup-close" onclick="closePopup()">&times;</button>
+        </div>
+        
+        <div class="popup-body">
+          <div class="popup-image-section">
+            <img id="modalImage" class="popup-image" src="" alt="Product">
+          </div>
+          
+          <div class="popup-details">
+            <h2 id="modalTitle" class="popup-title">Nama Produk</h2>
+            
+            <div class="detail-card">
+              <div class="detail-label">Minimal Order</div>
+              <div id="modalMinimal" class="detail-value">-</div>
+            </div>
+            
+            <div class="detail-card">
+              <div class="detail-label">Komposisi Bahan</div>
+              <div id="modalKomposisi" class="detail-value">-</div>
+            </div>
+            
+            <div class="detail-card">
+              <div class="detail-label">Petunjuk Penggunaan</div>
+              <div id="modalPetunjuk" class="detail-value">-</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="popup-actions">
+          <button class="btn-preorder" onclick="preOrder()">
+            <span>💬</span> Pre-Order Sekarang
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <script>
+    console.log('Script loaded');
 
-<script>
-  function filterProduk(kategori) {
-    const cards = document.querySelectorAll('.product-card');
-    cards.forEach(card => {
-      const k = card.getAttribute('data-kategori');
-      card.style.display = (kategori === 'all' || k === kategori) ? 'block' : 'none';
+    // Filter products
+    function filterProduk(kategori) {
+      console.log('Filter called:', kategori);
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Filter cards
+      cards.forEach(card => {
+        const cardKategori = card.getAttribute('data-kategori');
+        if (kategori === 'all' || cardKategori === kategori) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Open popup with smooth animation
+    function openPopup(name, komposisi, petunjuk, minimal, image) {
+      console.log('Opening popup for:', name);
+      
+      // Set modal content
+      document.getElementById('modalTitle').textContent = name;
+      document.getElementById('modalKomposisi').textContent = komposisi;
+      document.getElementById('modalPetunjuk').textContent = petunjuk;
+      document.getElementById('modalMinimal').textContent = minimal;
+      document.getElementById('modalImage').src = image;
+      
+      // Show modal with animation
+      const modal = document.getElementById('productModal');
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      
+      // Trigger animation
+      setTimeout(() => {
+        modal.classList.add('show');
+      }, 10);
+    }
+
+    // Close popup with smooth animation
+    function closePopup() {
+      console.log('Closing popup');
+      const modal = document.getElementById('productModal');
+      
+      modal.classList.remove('show');
+      
+      setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }, 300);
+    }
+
+    // Pre-order function
+    function preOrder() {
+      const productName = document.getElementById('modalTitle').textContent;
+      const message = `Halo, saya tertarik untuk pre-order produk: ${productName}`;
+      const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Close popup when clicking outside
+    document.getElementById('productModal').addEventListener('click', function(event) {
+      if (event.target === this) {
+        closePopup();
+      }
     });
-  }
 
-  function showPopup(title, bahan, penggunaan) {
-    document.getElementById('popup').style.display = 'flex';
-    document.getElementById('popup-title').innerText = title;
-    document.getElementById('popup-bahan').innerText = bahan;
-    document.getElementById('popup-penggunaan').innerText = penggunaan;
-    document.getElementById('popup-img').src = document.querySelector(`[onclick*="${title}"] img`).src;
-  }
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closePopup();
+      }
+    });
 
-  function hidePopup() {
-    document.getElementById('popup').style.display = 'none';
-  }
-</script>
-
+    // Initialize page
+    window.addEventListener('load', function() {
+      console.log('Page loaded, popup ready');
+    });
+  </script>
 </body>
 </html>

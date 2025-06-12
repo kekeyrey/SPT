@@ -3,31 +3,26 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\Product;
 
 class Product extends Model
 {
     protected $fillable = [
-        'name', 
-        'description', 
-        'price', 
-        'image', 
-        'category_id'
+        'name', 'description', 'price','petunjuk_pemakaian','komposisi','minimal_order', 'category_id', 'image'
     ];
 
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(Category::class, 'category_id');
-    }
+    public function category()
+{
+    return $this->belongsTo(Category::class, 'category_id');
+}
 
-    public function getImageUrlAttribute(): ?string
+
+    // Accessor untuk mendapatkan URL gambar
+    public function getImageUrlAttribute()
     {
-        if (!$this->image) {
-            return null;
+        if ($this->image) {
+            return asset('storage/products/' . $this->image);
         }
-
-        return strpos($this->image, 'http') === 0 
-            ? $this->image 
-            : asset('storage/' . ltrim($this->image, 'public/'));
+        return null;
     }
 }

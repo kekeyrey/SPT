@@ -6,20 +6,23 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 
-Route::resource('products', ProductController::class);
-// Route untuk halaman daftar produk
-Route::get('/index', [ProductController::class, 'index'])->name('produk.index');
+// PERBAIKAN: Sintaks yang benar untuk route
+Route::get('/', [ProductController::class, 'homenon'])->name('home');
+Route::get('/homenon', [ProductController::class, 'homenon'])->name('homenon');
 
+// Routes untuk halaman lain
+Route::get('/about', [AboutController::class, 'about'])->name('about');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
+// Auth routes
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');
+
+// Admin routes untuk products management
+Route::resource('products', ProductController::class);
 Route::resource('categories', CategoryController::class);
-Route::resource('products', ProductController::class);
-
-Route::get('/', function () {return view('homenon');});
-Route::get('/homenon', function () {return view('homenon');});
-
-Route::get('/about', [AboutController::class, 'about']);
-
-Route::get('/contact', [ContactController::class, 'contact']);
-Route::get('/login', function () {return view('auth.login');});
-Route::get('/dashboard', function () {return view('admin.dashboard');});
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-
